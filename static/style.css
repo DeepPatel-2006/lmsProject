@@ -1,64 +1,116 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fafafa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
 nav {
-    background: #333;
-    padding: 1em;
+    background: #0077B6;
+    padding: 1.2em 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #90E0EF;
 }
 
 form {
     display: inline-block;
     text-align: left;
     background: white;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 40px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    max-width: 450px;
+    width: 90%;
 }
 
-input {
+input, textarea {
     display: block;
-    margin: 10px 0;
-    padding: 8px;
-    width: 200px;
+    margin: 15px 0;
+    padding: 12px;
+    width: calc(100% - 24px);
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #00B4D8;
+    box-shadow: 0 0 5px rgba(0, 180, 216, 0.5);
+    outline: none;
 }
 
 button {
-    padding: 8px 16px;
-    background: #007BFF;
+    padding: 12px 24px;
+    background: #00B4D8;
     border: none;
     color: white;
-    border-radius: 4px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
 }
 
 button:hover {
-    background: #0056b3;
+    background: #0077B6;
+}
+
+button:active {
+    transform: translateY(1px);
 }
 
 .flashes {
     list-style-type: none;
     padding: 0;
+    margin-top: 20px;
 }
 
 .flashes li {
     margin: 10px auto;
-    width: 300px;
-    padding: 10px;
-    border-radius: 5px;
+    width: 90%;
+    max-width: 400px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    border-left: 5px solid;
 }
 
-.success { background: #d4edda; color: #155724; }
-.danger { background: #f8d7da; color: #721c24; }
-.warning { background: #fff3cd; color: #856404; }
-.info { background: #cce5ff; color: #004085; }
+.success {
+    background: #e6ffec;
+    color: #005f24;
+    border-color: #00c853;
+}
+
+.danger {
+    background: #ffe6e6;
+    color: #990000;
+    border-color: #ff4444;
+}
+
+.warning {
+    background: #fff8e6;
+    color: #996600;
+    border-color: #ff9900;
+}
+
+.info {
+    background: #e6f7ff;
+    color: #004d66;
+    border-color: #33b5e5;
+}
